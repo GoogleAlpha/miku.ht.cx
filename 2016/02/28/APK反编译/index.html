@@ -15,18 +15,17 @@
 	})();
 	</script>
   
-  <title>idea License server 破解地址 | Blog for HaoYe</title>
+  <title>APK反编译 | Blog for HaoYe</title>
   <meta name="author" content="ZhangHao">
   
-  <meta name="description" content="#
-标签（空格分隔）： 破解
+  <meta name="description" content="在学习Android开发的过程你，你往往会去借鉴别人的应用是怎么开发的，那些漂亮的动画和精致的布局可能会让你爱不释手，作为一个开发者，你可能会很想知道这些效果界面是怎么去实现的，这时，你便可以对改应用的APK进行反编译查看。下面是我参考了一些文章后简单的教程详解。
 
-License server：http://www.iteblog.com/idea/key.php可激活IntelliJ IDEA 15：">
+（注：反编译不是让各位开发者去对">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="idea License server 破解地址"/>
+  <meta property="og:title" content="APK反编译"/>
   <meta property="og:site_name" content="Blog for HaoYe"/>
 
   
@@ -78,15 +77,15 @@ License server：http://www.iteblog.com/idea/key.php可激活IntelliJ IDEA 15：
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	idea License server 破解地址
+	APK反编译
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="ZhangHao">ZhangHao</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-02-25T23:05:29.283Z" itemprop="datePublished">2016-02-26</time>
-    更新日期:<time datetime="2016-02-25T23:05:29.252Z" itemprop="dateModified">2016-02-26</time>
+    <time datetime="2016-02-28T09:05:06.117Z" itemprop="datePublished">2016-02-28</time>
+    更新日期:<time datetime="2016-02-28T09:05:06.117Z" itemprop="dateModified">2016-02-28</time>
     
   </p>
 </header>
@@ -97,17 +96,47 @@ License server：http://www.iteblog.com/idea/key.php可激活IntelliJ IDEA 15：
 				
 			</div>
 		
-        <p>#</p>
-<p>标签（空格分隔）： 破解</p>
-<hr>
-<p><strong>License server：<a href="http://www.iteblog.com/idea/key.php" target="_blank" rel="external">http://www.iteblog.com/idea/key.php</a></strong><br>可激活IntelliJ IDEA 15：</p>
+        <p><strong>在学习Android开发的过程你，你往往会去借鉴别人的应用是怎么开发的，那些漂亮的动画和精致的布局可能会让你爱不释手，作为一个开发者，你可能会很想知道这些效果界面是怎么去实现的，这时，你便可以对改应用的APK进行反编译查看。下面是我参考了一些文章后简单的教程详解。</strong></p>
+<blockquote>
+<p>（注：反编译不是让各位开发者去对一个应用破解搞重装什么的，主要目的是为了促进开发者学习，借鉴好的代码，提升自我开发水平。</p>
+</blockquote>
+<p>##使用工具<br>apktool:<br><a href="http://ibotpeaches.github.io/Apktool/" target="_blank" rel="external">http://ibotpeaches.github.io/Apktool/</a></p>
+<p>dex2jar:<br><a href="http://www.softpedia.com/get/Programming/Other-Programming-Files/dex2jar.shtml" target="_blank" rel="external">http://www.softpedia.com/get/Programming/Other-Programming-Files/dex2jar.shtml</a></p>
+<p>jd-gui:<br><a href="http://jd.benow.ca/" target="_blank" rel="external">http://jd.benow.ca/</a></p>
+<p>###工具介绍：</p>
+<p>####apktool  </p>
+<blockquote>
+<p>作用：资源文件获取，可以提取出图片文件和布局文件进行使用查看</p>
+<p>####dex2jar<br>作用：将apk反编译成java源码（classes.dex转化成jar文件）</p>
+<p>####jd-gui<br>作用：查看APK中classes.dex转化成出的jar文件，即源码文件</p>
+</blockquote>
+<p>###反编译流程：</p>
+<ol>
+<li><p>####apk反编译得到程序的源代码、图片、XML配置、语言资源等文件<br>下载上述工具中的apktool，解压得到3个文件：aapt.exe，apktool.bat，apktool.jar ，将需要反编译的APK文件放到该目录下,打开命令行界面（运行-CMD),定位到apktool文件夹，输入以下命令：apktool.bat d -f  test.apk  test</p>
+<blockquote>
+<ul>
+<li>命令中test.apk指的是要反编译的APK文件全名，test为反编译后资源文件存放的目录名称，即为：apktool.bat   d  -f    [apk文件 ]   [输出文件夹]。</li>
+<li>如果你想将反编译完的文件重新打包成apk，那你可以：输入apktool.bat   b    test（你编译出来文件夹）便可</li>
+</ul>
+</blockquote>
+</li>
+<li><p>####Apk反编译得到Java源代码</p>
+</li>
+</ol>
+<ul>
+<li>下载上述工具中的dex2jar和jd-gui ，解压<br>将要反编译的APK后缀名改为.rar或则 .zip，并解压，得到其中的额classes.dex文件（它就是java文件编译再通过dx工具打包而成的），将获取到的classes.dex放到之前解压出来的工具dex2jar文件夹内，</li>
+<li><p>在命令行下定位到dex2jar.bat所在目录，输入dex2jar.bat   classes.dex。</p>
+</li>
+<li><p>在目录下会生成一个classes_dex2jar.jar的文件，然后打开工具jd-gui文件夹里的jd-gui.exe，之后用该工具打开之前生成的classes_dex2jar.jar文件，便可以看到源码了</p>
+</li>
+</ul>
 
     </div>
     <footer>
         
   
   <div class="categories">
-    <a href="/categories/破解/">破解</a>
+    <a href="/categories/Android/">Android</a>
   </div>
 
         
@@ -156,8 +185,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2016/02/27/八皇后/" class="alignleft prev" title="八皇后">八皇后</a>
     
+    <a href="/2016/02/27/八皇后/" class="alignright next" title="八皇后">八皇后</a>
     
     <div class="clearfix"></div>
 </nav>
