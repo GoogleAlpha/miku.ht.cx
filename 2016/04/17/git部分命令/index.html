@@ -15,16 +15,21 @@
 	})();
 	</script>
   
-  <title>java安全证书 | Blog for HaoYe</title>
+  <title>git部分命令 | Blog for HaoYe</title>
   <meta name="author" content="ZhangHao">
   
-  <meta name="description" content="Java中导入网站安全证书第一步：导出相应网站的证书第二步：安装证书进入到X:\jdkX.X.X\jre\lib\security目录执行：
-keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail.">
+  <meta name="description" content="把目录变成仓库git init
+添加文件到暂存区git add x.x
+commitgit commit -m &amp;quot;note&amp;quot;
+检查仓库状态git status
+对比文件git diff
+查看日志git log查看所有日志git reflog
+回滚版本git reset --har">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="java安全证书"/>
+  <meta property="og:title" content="git部分命令"/>
   <meta property="og:site_name" content="Blog for HaoYe"/>
 
   
@@ -76,15 +81,15 @@ keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail."
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	java安全证书
+	git部分命令
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="ZhangHao">ZhangHao</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-04-08T03:47:35.009Z" itemprop="datePublished">2016-04-08</time>
-    更新日期:<time datetime="2016-04-08T03:47:35.004Z" itemprop="dateModified">2016-04-08</time>
+    <time datetime="2016-04-17T10:10:54.487Z" itemprop="datePublished">2016-04-17</time>
+    更新日期:<time datetime="2016-04-17T10:10:35.193Z" itemprop="dateModified">2016-04-17</time>
     
   </p>
 </header>
@@ -92,22 +97,33 @@ keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail."
 		
 			<div id="toc" class="toc-article">
 				<strong class="toc-title">文章目录</strong>
-				<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中导入网站安全证书"><span class="toc-number">1.</span> <span class="toc-text">Java中导入网站安全证书</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：导出相应网站的证书"><span class="toc-number">1.0.1.</span> <span class="toc-text">第一步：导出相应网站的证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步：安装证书"><span class="toc-number">1.0.2.</span> <span class="toc-text">第二步：安装证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除原来的证书与导入新的证书"><span class="toc-number">1.0.3.</span> <span class="toc-text">删除原来的证书与导入新的证书</span></a></li></ol></li></ol></li></ol>
+				
 			</div>
 		
-        <h1 id="Java中导入网站安全证书"><a href="#Java中导入网站安全证书" class="headerlink" title="Java中导入网站安全证书"></a>Java中导入网站安全证书</h1><h3 id="第一步：导出相应网站的证书"><a href="#第一步：导出相应网站的证书" class="headerlink" title="第一步：导出相应网站的证书"></a>第一步：导出相应网站的证书</h3><h3 id="第二步：安装证书"><a href="#第二步：安装证书" class="headerlink" title="第二步：安装证书"></a>第二步：安装证书</h3><p>进入到X:\jdkX.X.X\jre\lib\security目录<br>执行：</p>
-<pre><code>keytool -import -alias cacerts -keystore cacerts -file d:\software\AKAZAM-Mail.cer trustcacerts
-</code></pre><p>changeit为java中cacerts证书库的默认密码</p>
-<h3 id="删除原来的证书与导入新的证书"><a href="#删除原来的证书与导入新的证书" class="headerlink" title="删除原来的证书与导入新的证书"></a>删除原来的证书与导入新的证书</h3><pre><code>keytool -list -keystore cacerts 
-keytool -delete -alias akazam_email -keystore cacerts 
-keytool -import -alias akazam_email -file akazam_email.cer -keystore cacerts -trustcacerts
-</code></pre>
+        <p>把目录变成仓库<br><code>git init</code></p>
+<p>添加文件到暂存区<br><code>git add x.x</code></p>
+<p>commit<br><code>git commit -m &quot;note&quot;</code></p>
+<p>检查仓库状态<br><code>git status</code></p>
+<p>对比文件<br><code>git diff</code></p>
+<p>查看日志<br><code>git log</code><br>查看所有日志<br><code>git reflog</code></p>
+<p>回滚版本<br><code>git reset --hard HEAD^</code> HEAD当前 HEAD^ HEAD^^ ^^^</p>
+<p><code>git reset --hard 4586fb35</code> 回到某个commit`</p>
+<p>删除工作区修改(用版本库替换工作)<br><code>git checkout -- file</code></p>
+<p>删除暂存区的修改<br><code>git reset HEAD file</code></p>
+<p>删除版本库的文件<br><code>git rm file</code></p>
+<p><code>git commit</code></p>
+<p>同步<br><code>git remote add origin git@xxxx.git</code></p>
+<p><code>git push -u origin master</code>(第一次推送所有内容)</p>
+<p><code>git push origin master</code>(以后推送新修改)</p>
+<p>clone<br><code>git clone git@xxxx.git</code></p>
+<p>删除远程分支<br><code>git push origin :xxxx</code></p>
+
     </div>
     <footer>
         
   
   <div class="categories">
-    <a href="/categories/Java-爬虫/">Java 爬虫</a>
+    <a href="/categories/git/">git</a>
   </div>
 
         
@@ -157,7 +173,7 @@ with(document)0[
  <nav id="pagination" >
     
     
-    <a href="/2016/02/28/APK反编译/" class="alignright next" title="APK反编译">APK反编译</a>
+    <a href="/2016/04/13/java安全证书/" class="alignright next" title="java安全证书">java安全证书</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -180,6 +196,8 @@ with(document)0[
     <li><a href="/categories/Android/">Android</a><small>1</small></li>
   
     <li><a href="/categories/Java-爬虫/">Java 爬虫</a><small>1</small></li>
+  
+    <li><a href="/categories/git/">git</a><small>1</small></li>
   
     <li><a href="/categories/算法/">算法</a><small>1</small></li>
   
